@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho2026</title>
+    <style>
+        :root {
+            --azul-tech: #0A3663;
+            --azul-claro: #1E88E5;
+            --amarelo-sol: #FFD54F;
+            --verde-folha: #4CAF50;
+            --verde-escuro: #2E7D32;
+            --branco: #FFFFFF;
+            --background: #f4f7f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: linear-gradient(135deg, var(--azul-tech), var(--azul-claro));
+            color: var(--branco);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        header h1 span {
+            color: var(--amarelo-sol);
+        }
+
+        .github-link {
+            color: var(--branco);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--amarelo-sol);
+            border-radius: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .github-link:hover {
+            background-color: var(--amarelo-sol);
+            color: var(--azul-tech);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: calc(100vh - 80px);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.8rem;
+            color: var(--azul-tech);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content h2 mark {
+            background: linear-gradient(120deg, var(--amarelo-sol) 0%, #fff 100%);
+            padding: 0 0.4rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        /* Ilustração com Iluminação CSS */
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* O "Brilho/Iluminação" de fundo */
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,213,79,0.6) 0%, rgba(76,175,80,0.3) 50%, rgba(255,255,255,0) 70%);
+            /* Efeito de pulsação da luz */
+            animation: pulse 4s infinite alternate;
+            z-index: 1;
+        }
+
+        /* Desenho Vetorial da Planta */
+        .plant-svg {
+            width: 280px;
+            height: 280px;
+            z-index: 2;
+            filter: drop-shadow(0px 0px 15px rgba(255, 213, 79, 0.8));
+        }
+
+        /* Botão de Ação */
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--verde-folha), var(--verde-escuro));
+            color: var(--branco);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(76,175,80,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(76,175,80,0.6);
+        }
+
+        /* Animação da Luz */
+        @keyframes pulse {
+            0% {
+                transform: scale(0.9);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 4rem;
+            }
+            .hero-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Agrinho<span>2026</span></h1>
+        <a href="#" class="github-link">Ver no GitHub</a>
+    </header>
+
+    <main class="hero">
+        
+        <div class="hero-content">
+            <h2>Agro forte, <br><mark>futuro sustentável.</mark></h2>
+            <p>
+                A tecnologia e a terra caminhando lado a lado. O projeto Agrinho 2026 une a inovação digital às melhores práticas agrícolas, cultivando soluções inteligentes que preservam o meio ambiente, fortalecem o produtor e alimentam o amanhã.
+            </p>
+            <a href="#" class="btn-cta">Conhecer Projeto</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="glow-effect"></div>
+            
+            <svg class="plant-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35 80 L65 80 L60 95 L40 95 Z" fill="#7A5230" />
+                <ellipse cx="50" cy="80" rx="15" ry="3" fill="#5C3A21" />
+                
+                <path d="M50 80 Q48 50 50 25" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round"/>
+                
+                <path d="M49 65 Q25 60 30 45 Q45 55 49 65" fill="#2E7D32" />
+                <path d="M49 65 Q33 58 32 47" stroke="#81C784" stroke-width="0.5" fill="none" />
+
+                <path d="M50 50 Q75 45 70 30 Q55 40 50 50" fill="#4CAF50" />
+                <path d="M50 50 Q65 43 68 33" stroke="#A5D6A7" stroke-width="0.5" fill="none" />
+
+                <path d="M49 38 Q30 30 40 15 Q46 25 49 38" fill="#81C784" />
+
+                <path d="M50 25 Q55 15 50 5 Q45 15 50 25" fill="#C8E6C9" />
+            </svg>
+        </div>
+
+    </main>
+
+</body>
+</html>
